@@ -13,7 +13,7 @@
     })();
   </script>
   <link rel="preload" href="../assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
 </head>
 <body data-tappa="2">
   <main class="wrap">
@@ -24,25 +24,44 @@
     <div class="step-label"><span lang="it">Tappa <span class="n"></span> di 5</span><span lang="en">Stage <span class="n"></span> of 5</span></div>
     <div class="stamps"></div>
 
-    <h1><span lang="it">[Titolo tappa 2]</span><span lang="en">[Stage 2 title]</span></h1>
-    <img class="photo" src="../assets/foto-2.jpg" alt="">
+    <h1><span lang="it">Devi sapere che…</span><span lang="en">Did you know…</span></h1>
 
     <div class="story" lang="it">
-      <p>[Racconto — paragrafo 1]</p>
-      <p>[Racconto — paragrafo 2]</p>
+      <p>La Tre Valli Varesine, che si tiene nella nostra città ogni anno a ottobre, è la settima gara di ciclismo più seguita al mondo.</p>
     </div>
     <div class="story" lang="en">
-      <p>[Story — paragraph 1]</p>
-      <p>[Story — paragraph 2]</p>
+      <p>The Tre Valli Varesine, held in our city every October, is the seventh most followed cycling race in the world.</p>
     </div>
 
-    <!-- Qui andrà la domanda con il punteggio -->
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Alfredo Binda non l'ha mai vinta, ma indovina chi è salito sul podio nel 1930?</span><span lang="en">Alfredo Binda never won it, but guess who made the podium in 1930?</span></p>
+      <div class="opts">
+        <button class="opt" data-ok><span lang="it">Suo fratello</span><span lang="en">His brother</span></button>
+        <button class="opt"><span lang="it">Il suo rivale</span><span lang="en">His rival</span></button>
+        <button class="opt"><span lang="it">Suo cugino</span><span lang="en">His cousin</span></button>
+        <button class="opt"><span lang="it">Il corridore più anziano</span><span lang="en">The oldest rider</span></button>
+        <button class="opt"><span lang="it">Un australiano</span><span lang="en">An Australian</span></button>
+      </div>
+      <div class="info"><p><span lang="it">Ebbene sì: il fratello minore, Albino Binda, che completò il percorso in 6h51'00" precedendo i connazionali Luigi Ferrando e Riccardo Proserpio. Conclusero la prova solo 11 ciclisti.</span><span lang="en">That's right: his younger brother, Albino Binda, who finished the course in 6h51'00", ahead of fellow Italians Luigi Ferrando and Riccardo Proserpio. Only 11 riders completed the race.</span></p></div>
+    </div>
 
-    <div class="clue">
-      <div class="label"><span lang="it">Indizio per la tappa successiva</span><span lang="en">Clue for the next stage</span></div>
-      <p><span lang="it">[Indizio 2 → 3]</span><span lang="en">[Clue 2 → 3]</span></p>
+    <div class="q" data-type="poll">
+      <p class="q-text"><span lang="it">Lo sapevi?</span><span lang="en">Did you know that?</span></p>
+      <div class="opts row">
+        <button class="opt"><span lang="it">Sì</span><span lang="en">Yes</span></button>
+        <button class="opt">No</button>
+      </div>
+      <div class="info" data-opt="1"><p><span lang="it">Allora sei un vero esperto! 😉 Ecco il prossimo indizio, qui sotto 👇</span><span lang="en">Then you're a real expert! 😉 Here's your next clue, just below 👇</span></p></div>
+      <div class="info" data-opt="2"><p><span lang="it">Non ti preoccupare, ti daremo lo stesso il prossimo indizio 😉 Eccolo qui sotto 👇</span><span lang="en">Don't worry, you still get the next clue 😉 It's just below 👇</span></p></div>
+    </div>
+
+    <div class="after">
+      <div class="clue">
+        <div class="label"><span lang="it">Indizio per la tappa 3</span><span lang="en">Clue for stage 3</span></div>
+        <p class="todo">[Indizio 2 → 3]</p>
+      </div>
     </div>
   </main>
-  <script src="../assets/caccia.js"></script>
+  <script src="../assets/caccia.js?v=3"></script>
 </body>
 </html>

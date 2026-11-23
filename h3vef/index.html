@@ -13,7 +13,7 @@
     })();
   </script>
   <link rel="preload" href="../assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
 </head>
 <body data-tappa="5">
   <main class="wrap">
@@ -24,26 +24,48 @@
     <div class="step-label"><span lang="it">Tappa <span class="n"></span> di 5</span><span lang="en">Stage <span class="n"></span> of 5</span></div>
     <div class="stamps"></div>
 
-    <h1><span lang="it">[Titolo tappa 5]</span><span lang="en">[Stage 5 title]</span></h1>
-    <img class="photo" src="../assets/foto-5.jpg" alt="">
+    <h1><span lang="it">Devi sapere che…</span><span lang="en">Did you know…</span></h1>
 
     <div class="story" lang="it">
-      <p>[Racconto — paragrafo 1]</p>
-      <p>[Racconto — paragrafo 2]</p>
+      <p>Questo è il secondo anno di fila in cui i Mondiali Master di Cyclo-cross si svolgono sul suolo varesino.</p>
     </div>
     <div class="story" lang="en">
-      <p>[Story — paragraph 1]</p>
-      <p>[Story — paragraph 2]</p>
+      <p>This is the second year in a row that the Cyclo-cross Masters World Championships are held in Varese.</p>
     </div>
 
-    <!-- Qui andrà la domanda con il punteggio -->
+    <div class="q" data-type="poll">
+      <p class="q-text"><span lang="it">C'eri lo scorso anno?</span><span lang="en">Were you here last year?</span></p>
+      <div class="opts row">
+        <button class="opt"><span lang="it">Sì</span><span lang="en">Yes</span></button>
+        <button class="opt">No</button>
+      </div>
+      <div class="info" data-opt="1"><p><span lang="it">Allora bentornato! 🙂</span><span lang="en">Welcome back, then! 🙂</span></p></div>
+      <div class="info" data-opt="2"><p><span lang="it">E cosa avevi di meglio da fare, esattamente? Scherziamo 😉</span><span lang="en">And what exactly did you have better to do? Just kidding 😉</span></p></div>
+    </div>
 
-    <div class="finale">
-      <h2><span lang="it">Ce l'hai fatta!</span><span lang="en">You made it!</span></h2>
-      <p><span lang="it">[Testo finale]</span><span lang="en">[Final text]</span></p>
-      <a class="btn" href="https://trevallivaresine.info/2026-masters-cyclo-cross-uci-world-championships/"><span lang="it">Scopri l'evento</span><span lang="en">About the event</span></a>
+    <p class="intro-text"><span lang="it">Prima di mettere piede nell'arena della gara, ecco l'ultima domanda. Fai attenzione: qui c'è una sola risposta seria.</span><span lang="en">Before you step into the race arena, here's the last question. Careful: only one answer here is serious.</span></p>
+
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Che cos'è il cyclo-cross?</span><span lang="en">What is cyclo-cross?</span></p>
+      <div class="opts">
+        <button class="opt"><span lang="it">Una gara di tricicli per adulti</span><span lang="en">A tricycle race for grown-ups</span></button>
+        <button class="opt"><span lang="it">Una sfida mondiale che incorona chi ha la bici più pulita</span><span lang="en">A world contest crowning whoever has the cleanest bike</span></button>
+        <button class="opt" data-ok><span lang="it">Una disciplina del ciclismo su circuiti chiusi e brevi, in un mix di fango, sabbia ed erba, tra pendenze ripide e ostacoli da superare con la bici in mano</span><span lang="en">A cycling discipline raced on short closed circuits through mud, sand and grass, with steep slopes and obstacles you clear carrying your bike</span></button>
+        <button class="opt"><span lang="it">Un raduno di ciclisti ubriachi che fanno a gara a chi ha la bici più grande</span><span lang="en">A gathering of drunk cyclists competing over who has the biggest bike</span></button>
+      </div>
+      <div class="info"><p class="todo">[Curiosità da inserire]</p></div>
+    </div>
+
+    <div class="after">
+      <div class="finale">
+        <h2><span lang="it">Ce l'hai fatta!</span><span lang="en">You made it!</span></h2>
+        <p><span lang="it">Il tuo punteggio</span><span lang="en">Your score</span></p>
+        <span class="score"></span>
+        <p class="todo" style="color:#fff">[Testo finale — es. "Mostra questa schermata allo stand per ritirare il tuo gadget"]</p>
+        <a class="btn" href="https://trevallivaresine.info/2026-masters-cyclo-cross-uci-world-championships/"><span lang="it">Scopri l'evento</span><span lang="en">About the event</span></a>
+      </div>
     </div>
   </main>
-  <script src="../assets/caccia.js"></script>
+  <script src="../assets/caccia.js?v=3"></script>
 </body>
 </html>

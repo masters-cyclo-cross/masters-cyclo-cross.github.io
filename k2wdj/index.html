@@ -13,7 +13,7 @@
     })();
   </script>
   <link rel="preload" href="../assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
 </head>
 <body data-tappa="3">
   <main class="wrap">
@@ -24,25 +24,61 @@
     <div class="step-label"><span lang="it">Tappa <span class="n"></span> di 5</span><span lang="en">Stage <span class="n"></span> of 5</span></div>
     <div class="stamps"></div>
 
-    <h1><span lang="it">[Titolo tappa 3]</span><span lang="en">[Stage 3 title]</span></h1>
-    <img class="photo" src="../assets/foto-3.jpg" alt="">
+    <h1><span lang="it">Devi sapere che…</span><span lang="en">Did you know…</span></h1>
 
     <div class="story" lang="it">
-      <p>[Racconto — paragrafo 1]</p>
-      <p>[Racconto — paragrafo 2]</p>
+      <p>La storia di Alfredo Binda si incrocia con quella dell'arrampicata, seppur in modo metaforico: il ciclista varesino veniva infatti chiamato "Signore delle montagne" per la sua bravura nelle scalate alpine e dolomitiche, possibile grazie agli allenamenti sulle montagne di casa, dal Passo del Cuvignone al mitico Campo dei Fiori.</p>
+      <p class="q-text">Indovina quali di queste curiosità su di lui sono vere e quali false:</p>
     </div>
     <div class="story" lang="en">
-      <p>[Story — paragraph 1]</p>
-      <p>[Story — paragraph 2]</p>
+      <p>Alfredo Binda's story crosses paths with climbing, if only metaphorically: the Varese cyclist was nicknamed "Lord of the Mountains" for his skill on Alpine and Dolomite climbs, made possible by training on his home mountains, from the Passo del Cuvignone to the legendary Campo dei Fiori.</p>
+      <p class="q-text">Guess which of these facts about him are true and which are false:</p>
     </div>
 
-    <!-- Qui andrà la domanda con il punteggio -->
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Un anno fu pagato dagli organizzatori del Giro d'Italia per non partecipare al Giro.</span><span lang="en">One year the Giro d'Italia organisers paid him not to take part in the race.</span></p>
+      <div class="opts row">
+        <button class="opt" data-ok><span lang="it">Vero</span><span lang="en">True</span></button>
+        <button class="opt"><span lang="it">Falso</span><span lang="en">False</span></button>
+      </div>
+      <div class="info"><p><span lang="it">Vista la sua manifesta superiorità, nel 1930 gli organizzatori lo pagarono per non partecipare al Giro d'Italia: 22.500 lire, circa 27.000 € di oggi.</span><span lang="en">He was so clearly superior that in 1930 the organisers paid him not to ride the Giro d'Italia: 22,500 lire, about €27,000 today.</span></p></div>
+    </div>
 
-    <div class="clue">
-      <div class="label"><span lang="it">Indizio per la tappa successiva</span><span lang="en">Clue for the next stage</span></div>
-      <p><span lang="it">[Indizio 3 → 4]</span><span lang="en">[Clue 3 → 4]</span></p>
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Suonava la tromba nella banda del paese.</span><span lang="en">He played the trumpet in the village band.</span></p>
+      <div class="opts row">
+        <button class="opt" data-ok><span lang="it">Vero</span><span lang="en">True</span></button>
+        <button class="opt"><span lang="it">Falso</span><span lang="en">False</span></button>
+      </div>
+      <div class="info"><p><span lang="it">Alfredo Binda suonava davvero la tromba, tanto che i cronisti sportivi dell'epoca lo chiamavano spesso «il Trombettiere di Cittiglio».</span><span lang="en">Alfredo Binda really did play the trumpet, so much so that sports reporters of the time often called him "the Trumpeter of Cittiglio".</span></p></div>
+    </div>
+
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Ha vissuto a Varese per tutta la vita.</span><span lang="en">He lived in Varese all his life.</span></p>
+      <div class="opts row">
+        <button class="opt"><span lang="it">Vero</span><span lang="en">True</span></button>
+        <button class="opt" data-ok><span lang="it">Falso</span><span lang="en">False</span></button>
+      </div>
+      <div class="info"><p><span lang="it">Falso: da giovanissimo si trasferì in Francia per lavoro, ed è lì che iniziò a gareggiare. Ma la sua vita resta legata a Cittiglio, dove ancora oggi si trova la sua casa di famiglia.</span><span lang="en">False: as a teenager he moved to France for work, and that's where he started racing. But his life remains tied to Cittiglio, where his family home still stands today.</span></p></div>
+    </div>
+
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Portava sempre con sé un pettine, per non sfigurare nelle interviste di fine gara.</span><span lang="en">He always carried a comb, so he'd look good in post-race interviews.</span></p>
+      <div class="opts row">
+        <button class="opt"><span lang="it">Vero</span><span lang="en">True</span></button>
+        <button class="opt" data-ok><span lang="it">Falso</span><span lang="en">False</span></button>
+      </div>
+      <div class="info"><p><span lang="it">La celebre abitudine del pettine in tasca è di Hugo Koblet, che negli anni '50 fu soprannominato, non a caso, «le Pédaleur de charme».</span><span lang="en">The famous comb-in-the-pocket habit belongs to Hugo Koblet, who in the 1950s was nicknamed, not by chance, "le Pédaleur de charme".</span></p></div>
+    </div>
+
+    <div class="after">
+      <p class="congrats"><span lang="it">Ottimo lavoro! Ecco il prossimo indizio :)</span><span lang="en">Great job! Here's your next clue :)</span></p>
+      <div class="clue">
+        <div class="label"><span lang="it">Indizio per la tappa 4</span><span lang="en">Clue for stage 4</span></div>
+        <p class="todo">[Indizio 3 → 4]</p>
+      </div>
     </div>
   </main>
-  <script src="../assets/caccia.js"></script>
+  <script src="../assets/caccia.js?v=3"></script>
 </body>
 </html>

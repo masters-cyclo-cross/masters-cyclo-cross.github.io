@@ -13,7 +13,7 @@
     })();
   </script>
   <link rel="preload" href="../assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
 </head>
 <body data-tappa="4">
   <main class="wrap">
@@ -24,25 +24,53 @@
     <div class="step-label"><span lang="it">Tappa <span class="n"></span> di 5</span><span lang="en">Stage <span class="n"></span> of 5</span></div>
     <div class="stamps"></div>
 
-    <h1><span lang="it">[Titolo tappa 4]</span><span lang="en">[Stage 4 title]</span></h1>
-    <img class="photo" src="../assets/foto-4.jpg" alt="">
+    <h1><span lang="it">Devi sapere che…</span><span lang="en">Did you know…</span></h1>
 
     <div class="story" lang="it">
-      <p>[Racconto — paragrafo 1]</p>
-      <p>[Racconto — paragrafo 2]</p>
+      <p>Nel 2008 la Soc. Binda ha organizzato i Mondiali di ciclismo su strada proprio qui a Varese.</p>
     </div>
     <div class="story" lang="en">
-      <p>[Story — paragraph 1]</p>
-      <p>[Story — paragraph 2]</p>
+      <p>In 2008 Soc. Binda organised the Road Cycling World Championships right here in Varese.</p>
     </div>
 
-    <!-- Qui andrà la domanda con il punteggio -->
+    <div class="q" data-type="poll">
+      <p class="q-text"><span lang="it">C'eri?</span><span lang="en">Were you there?</span></p>
+      <div class="opts row">
+        <button class="opt"><span lang="it">Sì</span><span lang="en">Yes</span></button>
+        <button class="opt">No</button>
+      </div>
+      <div class="info" data-opt="1"><p><span lang="it">Allora hai visto la storia da vicino! 🙂</span><span lang="en">Then you saw history up close! 🙂</span></p></div>
+      <div class="info" data-opt="2"><p><span lang="it">Poco male: quest'anno sei qui 😉</span><span lang="en">No worries: this year you're here 😉</span></p></div>
+    </div>
 
-    <div class="clue">
-      <div class="label"><span lang="it">Indizio per la tappa successiva</span><span lang="en">Clue for the next stage</span></div>
-      <p><span lang="it">[Indizio 4 → 5]</span><span lang="en">[Clue 4 → 5]</span></p>
+    <div class="q" data-type="poll">
+      <p class="q-text"><span lang="it">Quanti anni avevi?</span><span lang="en">How old were you?</span></p>
+      <div class="opts">
+        <button class="opt"><span lang="it">Non ero ancora nato/a</span><span lang="en">I wasn't born yet</span></button>
+        <button class="opt"><span lang="it">Meno di 18</span><span lang="en">Under 18</span></button>
+        <button class="opt">18–35</button>
+        <button class="opt"><span lang="it">Più di 35</span><span lang="en">Over 35</span></button>
+      </div>
+    </div>
+
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Chi ha vinto quell'edizione?</span><span lang="en">Who won that edition?</span></p>
+      <div class="opts">
+        <button class="opt" data-ok><span lang="it">L'italiano Alessandro Ballan</span><span lang="en">Italy's Alessandro Ballan</span></button>
+        <button class="opt"><span lang="it">L'italiano Paolo Bettini</span><span lang="en">Italy's Paolo Bettini</span></button>
+        <button class="opt"><span lang="it">Lo spagnolo Alberto Contador</span><span lang="en">Spain's Alberto Contador</span></button>
+      </div>
+      <div class="info"><p><span lang="it">L'edizione fu vinta dall'italiano Alessandro Ballan, che chiuse la gara in 6h37'30". Il percorso era lungo 260 km.</span><span lang="en">That edition was won by Italy's Alessandro Ballan, who finished the race in 6h37'30". The course was 260 km long.</span></p></div>
+    </div>
+
+    <div class="after">
+      <p class="congrats"><span lang="it">Grande, sei arrivato all'ultimo indizio :)</span><span lang="en">Great, you've reached the last clue :)</span></p>
+      <div class="clue">
+        <div class="label"><span lang="it">Indizio per la tappa 5</span><span lang="en">Clue for stage 5</span></div>
+        <p class="todo">[Indizio 4 → 5]</p>
+      </div>
     </div>
   </main>
-  <script src="../assets/caccia.js"></script>
+  <script src="../assets/caccia.js?v=3"></script>
 </body>
 </html>

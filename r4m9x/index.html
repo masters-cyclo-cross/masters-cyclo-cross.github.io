@@ -13,7 +13,7 @@
     })();
   </script>
   <link rel="preload" href="../assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
 </head>
 <body data-tappa="1">
   <main class="wrap">
@@ -24,25 +24,45 @@
     <div class="step-label"><span lang="it">Tappa <span class="n"></span> di 5</span><span lang="en">Stage <span class="n"></span> of 5</span></div>
     <div class="stamps"></div>
 
-    <h1><span lang="it">[Titolo tappa 1]</span><span lang="en">[Stage 1 title]</span></h1>
-    <img class="photo" src="../assets/foto-1.jpg" alt="">
+    <h1><span lang="it">Devi sapere che…</span><span lang="en">Did you know…</span></h1>
 
     <div class="story" lang="it">
-      <p>[Racconto — paragrafo 1]</p>
-      <p>[Racconto — paragrafo 2]</p>
+      <p>La Soc. Binda, che organizza questo mondiale di cyclo-cross, è nata nel 1929: quasi cento (!) anni fa.</p>
+      <p>Prende il nome da Alfredo Binda, grande ciclista varesino del secolo scorso.</p>
     </div>
     <div class="story" lang="en">
-      <p>[Story — paragraph 1]</p>
-      <p>[Story — paragraph 2]</p>
+      <p>Soc. Binda, the club organising this cyclo-cross world championship, was founded in 1929: almost a hundred (!) years ago.</p>
+      <p>It is named after Alfredo Binda, a great cyclist from Varese in the last century.</p>
     </div>
 
-    <!-- Qui andrà la domanda con il punteggio -->
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Secondo te, quante volte ha vinto il mondiale?</span><span lang="en">How many times do you think he won the World Championship?</span></p>
+      <div class="opts row">
+        <button class="opt">1</button>
+        <button class="opt">2</button>
+        <button class="opt" data-ok>3</button>
+      </div>
+      <div class="info"><p><span lang="it">3 volte: nel 1927 al Nürburgring, nel 1930 a Liegi e nel 1932 a Roma.</span><span lang="en">3 times: in 1927 at the Nürburgring, in 1930 in Liège and in 1932 in Rome.</span></p></div>
+    </div>
 
-    <div class="clue">
-      <div class="label"><span lang="it">Indizio per la tappa successiva</span><span lang="en">Clue for the next stage</span></div>
-      <p><span lang="it">[Indizio 1 → 2]</span><span lang="en">[Clue 1 → 2]</span></p>
+    <div class="q" data-type="quiz">
+      <p class="q-text"><span lang="it">Quante volte ha vinto il Giro d'Italia?</span><span lang="en">How many times did he win the Giro d'Italia?</span></p>
+      <div class="opts row">
+        <button class="opt">0</button>
+        <button class="opt">3</button>
+        <button class="opt" data-ok>5</button>
+      </div>
+      <div class="info"><p><span lang="it">5 volte: nel 1925, 1927, 1928, 1929 e 1933. È il record assoluto, condiviso con Fausto Coppi ed Eddy Merckx.</span><span lang="en">5 times: in 1925, 1927, 1928, 1929 and 1933. That's the all-time record, shared with Fausto Coppi and Eddy Merckx.</span></p></div>
+    </div>
+
+    <div class="after">
+      <p class="congrats"><span lang="it">Complimenti! Ecco dove si trova il prossimo QR code:</span><span lang="en">Well done! Here's where to find the next QR code:</span></p>
+      <div class="clue">
+        <div class="label"><span lang="it">Indizio per la tappa 2</span><span lang="en">Clue for stage 2</span></div>
+        <p class="todo">[Indizio 1 → 2]</p>
+      </div>
     </div>
   </main>
-  <script src="../assets/caccia.js"></script>
+  <script src="../assets/caccia.js?v=3"></script>
 </body>
 </html>
