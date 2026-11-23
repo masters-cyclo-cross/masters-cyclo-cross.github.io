@@ -1,3 +1,6 @@
 # Foto originali (WhatsApp): vanno online solo dopo essere state compresse e rinominate
 assets/WhatsApp Image*
 .DS_Store
+# File sorgente dei loghi: online vanno solo le versioni alleggerite (logo-uci.jpg, logo-arrampicata-varese.png)
+assets/*.pdf
+assets/2026_UCI_CX_Master_WCh_LOGO_CMYK_-Varese.jpg
