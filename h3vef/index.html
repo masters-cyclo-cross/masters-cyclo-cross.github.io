@@ -5,29 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Caccia al tesoro — Tappa 5</title>
+  <script>
+    (function () {
+      var l; try { l = localStorage.getItem("caccia-cx-lang"); } catch (e) {}
+      if (!l) l = (navigator.language || "").toLowerCase().indexOf("it") === 0 ? "it" : "en";
+      document.documentElement.dataset.lang = l; document.documentElement.lang = l;
+    })();
+  </script>
+  <link rel="preload" href="../assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body data-tappa="5">
   <main class="wrap">
     <div class="top">
-      <!-- <img src="../assets/logo.png" alt="Logo evento"> -->
-      <span class="event">Masters Cyclo-cross · Varese 2026</span>
+      <img src="../assets/logo.jpg" alt="Logo 2026 Masters Cyclo-cross UCI World Championships">
+      <span class="event">Masters Cyclo-cross<br>Varese 2026</span>
+      <div class="lang"><button data-set="it">IT</button><button data-set="en">EN</button></div>
     </div>
-    <div class="step-label"></div>
+    <div class="step-label"><span lang="it">Tappa <span class="n"></span> di 5</span><span lang="en">Stage <span class="n"></span> of 5</span></div>
     <div class="stamps"></div>
 
-    <h1>[Titolo tappa 5]</h1>
+    <h1><span lang="it">[Titolo tappa 5]</span><span lang="en">[Stage 5 title]</span></h1>
     <img class="photo" src="../assets/foto-5.jpg" alt="">
 
-    <div class="story">
-      <p>[Racconto sull'evento — paragrafo 1, segnaposto]</p>
-      <p>[Racconto sull'evento — paragrafo 2, segnaposto]</p>
+    <div class="story" lang="it">
+      <p>[Racconto — paragrafo 1]</p>
+      <p>[Racconto — paragrafo 2]</p>
+    </div>
+    <div class="story" lang="en">
+      <p>[Story — paragraph 1]</p>
+      <p>[Story — paragraph 2]</p>
     </div>
 
+    <!-- Qui andrà la domanda con il punteggio -->
+
     <div class="finale">
-      <h2>Ce l'hai fatta!</h2>
-      <p>[Testo finale — es. "mostra questa schermata allo stand per il tuo premio"]</p>
-      <a class="btn" href="https://trevallivaresine.info/2026-masters-cyclo-cross-uci-world-championships/">Scopri l'evento</a>
+      <h2><span lang="it">Ce l'hai fatta!</span><span lang="en">You made it!</span></h2>
+      <p><span lang="it">[Testo finale]</span><span lang="en">[Final text]</span></p>
+      <a class="btn" href="https://trevallivaresine.info/2026-masters-cyclo-cross-uci-world-championships/"><span lang="it">Scopri l'evento</span><span lang="en">About the event</span></a>
     </div>
   </main>
   <script src="../assets/caccia.js"></script>

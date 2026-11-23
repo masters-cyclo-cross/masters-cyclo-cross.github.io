@@ -4,17 +4,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Caccia al tesoro — Masters Cyclo-cross Varese</title>
+  <title>Caccia al tesoro — Masters Cyclo-cross Varese 2026</title>
+  <script>
+    // Lingua: quella scelta prima, altrimenti quella del telefono (italiano → IT, tutto il resto → EN)
+    (function () {
+      var l; try { l = localStorage.getItem("caccia-cx-lang"); } catch (e) {}
+      if (!l) l = (navigator.language || "").toLowerCase().indexOf("it") === 0 ? "it" : "en";
+      document.documentElement.dataset.lang = l; document.documentElement.lang = l;
+    })();
+  </script>
+  <link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <main class="wrap">
-    <div class="top"><span class="event">Masters Cyclo-cross · Varese 2026</span></div>
-    <h1>Caccia al tesoro</h1>
-    <div class="story">
-      <p>Cinque QR code sono nascosti per Varese. Trova il primo e segui gli indizi fino all'evento.</p>
+  <main class="wrap intro">
+    <div class="top">
+      <span class="event">2026 Masters Cyclo-cross<br>UCI World Championships · Varese</span>
+      <div class="lang"><button data-set="it">IT</button><button data-set="en">EN</button></div>
     </div>
-    <a class="btn" style="background:var(--accent);color:var(--accent-ink)" href="https://trevallivaresine.info/2026-masters-cyclo-cross-uci-world-championships/">Scopri l'evento</a>
+
+    <img class="hero-logo" src="assets/logo.jpg" alt="Logo 2026 Masters Cyclo-cross UCI World Championships">
+
+    <h1><span lang="it">Caccia al tesoro</span><span lang="en">Treasure hunt</span></h1>
+
+    <div class="chips">
+      <span class="chip">5 QR code</span>
+      <span class="chip" lang="it">Domande e punti</span><span class="chip" lang="en">Questions &amp; points</span>
+      <span class="chip" lang="it">Arrivo all'Ippodromo</span><span class="chip" lang="en">Finish at the Racecourse</span>
+    </div>
+
+    <div class="story" lang="it">
+      <p>Lungo la strada dovrai trovare 5 QR code, che ti aiuteranno a scoprire curiosità sulla storia del ciclismo varesino. In questo modo accumulerai punti per vincere premi una volta arrivato all'Ippodromo.</p>
+      <p>Il gioco è semplice: scansiona i QR e rispondi alle domande.</p>
+      <p>Non ti preoccupare, gli indizi compariranno anche se sbagli la risposta 😉</p>
+      <p>All'arrivo, oltre ai campioni del mondo di cyclo-cross, ti aspettano le sfide di Arrampicata Varese e gadget che non potrai lasciare lì 🙂</p>
+    </div>
+    <div class="story" lang="en">
+      <p>Along the way you'll find 5 QR codes that will help you discover the history of cycling in Varese. Each one earns you points, and you can win prizes with them once you reach the Racecourse (Ippodromo).</p>
+      <p>The game is simple: scan the QR codes and answer the questions.</p>
+      <p>Don't worry, the clues will show up even if you get the answer wrong 😉</p>
+      <p>At the finish, besides the cyclo-cross world champions, the Arrampicata Varese climbing challenges are waiting for you, plus gadgets you won't want to leave behind 🙂</p>
+    </div>
+
+    <p class="go"><span lang="it">Pronti? Che la caccia abbia inizio!</span><span lang="en">Ready? Let the hunt begin!</span></p>
+
+    <div class="clue">
+      <div class="label"><span lang="it">Dove trovi il primo QR code</span><span lang="en">Where to find the first QR code</span></div>
+      <p><span lang="it">[Indizio per la tappa 1 — da scrivere quando il punto è deciso]</span><span lang="en">[Clue for stage 1 — to be written once the spot is decided]</span></p>
+    </div>
+
+    <div class="partners">
+      <img src="assets/logo.jpg" alt="2026 Masters Cyclo-cross UCI World Championships">
+      <!-- <img src="assets/logo-arrampicata-varese.png" alt="Arrampicata Varese"> -->
+    </div>
   </main>
+  <script src="assets/caccia.js"></script>
 </body>
 </html>
