@@ -75,7 +75,6 @@ img { max-width: 100%; }
 
 /* Loghi (es. stemma Soc. Binda): piccoli e centrati, non a tutta larghezza */
 .emblem { display: block; width: 200px; height: auto; margin: 8px auto 24px; }
-
 /* Quiz */
 .intro-text { font-size: 19px; margin-bottom: 14px; }
 .q { margin: 24px 0; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); }
@@ -121,6 +120,7 @@ img { max-width: 100%; }
   background: var(--blue); color: #fff; text-align: center;
 }
 .finale h2 { font-size: 24px; margin-bottom: 8px; }
+.finale-text { font-size: 18px; margin-top: 12px; }
 .btn {
   display: inline-block; margin-top: 16px; padding: 14px 22px; border-radius: 999px;
   background: var(--red); color: #fff; font-weight: 700; text-decoration: none;
