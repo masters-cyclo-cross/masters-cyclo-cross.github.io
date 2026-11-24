@@ -41,47 +41,47 @@ html[data-lang="en"] body [lang="it"] { display: none !important; }
   display: flex; border: 1.5px solid var(--blue); border-radius: 999px; overflow: hidden;
 }
 .lang button {
-  font: inherit; font-size: 12px; font-weight: 600; border: 0; padding: 5px 10px;
+  font: inherit; font-size: 14px; font-weight: 600; border: 0; padding: 6px 12px;
   background: transparent; color: var(--blue); cursor: pointer;
 }
 html[data-lang="it"] .lang button[data-set="it"],
 html[data-lang="en"] .lang button[data-set="en"] { background: var(--blue); color: #fff; }
 
 /* Timbri delle tappe */
-.step-label { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+.step-label { font-size: 15px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
 .stamps { display: flex; gap: 6px; margin-bottom: 20px; }
 .stamp { flex: 1; height: 8px; border-radius: 4px; background: var(--line); }
 .stamp.done { background: var(--gold); }
 
-h1 { font-size: 30px; font-weight: 700; line-height: 1.15; color: var(--blue); margin-bottom: 16px; }
+h1 { font-size: 32px; font-weight: 700; line-height: 1.15; color: var(--blue); margin-bottom: 16px; }
 .kicker { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--red); margin-bottom: 6px; }
 
 .photo {
-  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  width: 100%; height: auto; max-height: 65vh; object-fit: cover;
   border-radius: var(--radius); background: var(--soft); margin-bottom: 20px; display: block;
 }
 
-.story p { margin-bottom: 14px; font-size: 17px; }
+.story p { margin-bottom: 14px; font-size: 19px; }
 
 /* Pagina introduttiva */
 .hero-logo { display: block; width: 180px; max-width: 60%; margin: 8px auto 20px; }
 .intro h1 { text-align: center; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 24px; }
-.chip { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--soft); color: var(--blue); }
+.chip { font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--soft); color: var(--blue); }
 .go { font-size: 20px; font-weight: 700; color: var(--red); text-align: center; margin: 24px 0 0; }
 
 /* Nessuna immagine può uscire dalla pagina */
 img { max-width: 100%; }
 
 /* Quiz */
-.intro-text { font-size: 17px; margin-bottom: 14px; }
+.intro-text { font-size: 19px; margin-bottom: 14px; }
 .q { margin: 24px 0; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); }
-.q-text { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+.q-text { font-size: 19px; font-weight: 600; margin-bottom: 12px; }
 .opts { display: flex; flex-direction: column; gap: 8px; }
 .opts.row { flex-direction: row; }
 .opts.row .opt { flex: 1; text-align: center; }
 .opt {
-  font: inherit; font-size: 16px; text-align: left; padding: 12px 14px; border-radius: 12px;
+  font: inherit; font-size: 18px; text-align: left; padding: 12px 14px; border-radius: 12px;
   border: 1.5px solid var(--line); background: #fff; color: var(--ink); cursor: pointer;
 }
 .opt:disabled { cursor: default; opacity: .55; }
@@ -90,7 +90,7 @@ img { max-width: 100%; }
 .opt.wrong { border-color: var(--red); background: #fbeaea; opacity: 1; }
 .info { display: none; }
 .info.shown { display: block; }
-.fb { margin-top: 12px; padding: 14px; border-radius: 12px; font-size: 15px; }
+.fb { margin-top: 12px; padding: 14px; border-radius: 12px; font-size: 17px; }
 .fb.good { background: #e8f5eb; border-left: 4px solid #2e8540; }
 .fb.bad { background: #fbeaea; border-left: 4px solid var(--red); }
 .fb.neutral { background: var(--soft); border-left: 4px solid var(--blue); }
@@ -101,7 +101,7 @@ img { max-width: 100%; }
 /* Indizio e finale compaiono solo dopo aver risposto a tutto */
 .after { display: none; }
 .after.shown { display: block; }
-.after .congrats { font-size: 17px; font-weight: 600; margin-top: 28px; }
+.after .congrats { font-size: 19px; font-weight: 600; margin-top: 28px; }
 .score { font-size: 40px; font-weight: 700; display: block; margin: 8px 0; }
 
 /* Riquadro dell'indizio */
@@ -109,8 +109,8 @@ img { max-width: 100%; }
   margin-top: 28px; padding: 20px; border-radius: var(--radius);
   background: var(--soft); border: 2px dashed var(--blue);
 }
-.clue .label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--blue); margin-bottom: 8px; }
-.clue p { font-size: 18px; font-weight: 600; }
+.clue .label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--blue); margin-bottom: 8px; }
+.clue p { font-size: 20px; font-weight: 600; }
 
 /* Schermata finale */
 .finale {
