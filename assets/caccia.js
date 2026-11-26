@@ -32,8 +32,26 @@
     });
   });
 
+  // --- Statistiche (GoatCounter: niente cookie, niente dati personali) ---
+  // Manda un evento una sola volta per telefono. Lo script di GoatCounter si carica
+  // in modo asincrono: se non è ancora pronto si riprova per qualche secondo.
+  // Se non arriva mai (es. blocca-pubblicità) non si segna come inviato.
+  // Eventi: arrivo-intro, arrivo-tappa-N, fine-tappa-N,
+  //         percorso-completo e punteggio-finale-X (solo se il telefono ha tutti e 5 i timbri).
+  function evento(nome, tentativi) {
+    var inviati = leggi("caccia-cx-inviati", []);
+    if (inviati.indexOf(nome) !== -1) return;
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: nome, title: nome, event: true });
+      inviati.push(nome); scrivi("caccia-cx-inviati", inviati);
+    } else if ((tentativi || 0) < 20) {
+      setTimeout(function () { evento(nome, (tentativi || 0) + 1); }, 500);
+    }
+  }
+
   var tappa = parseInt(document.body.dataset.tappa, 10);
-  if (!tappa) return; // pagina introduttiva: niente timbri né quiz
+  if (!tappa) { evento("arrivo-intro"); return; } // pagina introduttiva: niente timbri né quiz
+  evento("arrivo-tappa-" + tappa);
 
   // --- Timbri ---
   var trovate = leggi("caccia-cx-tappe", []);
@@ -91,21 +109,6 @@
     return ok;
   }
 
-  // --- Statistiche (GoatCounter: niente cookie, niente dati personali) ---
-  // Manda un evento una sola volta per telefono. Lo script di GoatCounter si carica
-  // in modo asincrono: se non è ancora pronto si riprova per qualche secondo.
-  // Se non arriva mai (es. blocca-pubblicità) non si segna come inviato.
-  function evento(nome, tentativi) {
-    var inviati = leggi("caccia-cx-inviati", []);
-    if (inviati.indexOf(nome) !== -1) return;
-    if (window.goatcounter && window.goatcounter.count) {
-      window.goatcounter.count({ path: nome, title: nome, event: true });
-      inviati.push(nome); scrivi("caccia-cx-inviati", inviati);
-    } else if ((tentativi || 0) < 20) {
-      setTimeout(function () { evento(nome, (tentativi || 0) + 1); }, 500);
-    }
-  }
-
   function controllaFine() {
     var tutte = domande.every(function (q, idx) { return risposte[tappa + "." + idx]; });
     if (!tutte) return;
@@ -113,7 +116,14 @@
     if (after) after.classList.add("shown");
     document.querySelectorAll(".score").forEach(function (el) { el.textContent = punteggio() + " / " + DOMANDE_TOTALI; });
     evento("fine-tappa-" + tappa);
-    if (tappa === TAPPE) evento("punteggio-finale-" + punteggio());
+    if (tappa === TAPPE) {
+      var tutteTrovate = true;
+      for (var t = 1; t <= TAPPE; t++) if (trovate.indexOf(t) === -1) tutteTrovate = false;
+      if (tutteTrovate) {
+        evento("percorso-completo");
+        evento("punteggio-finale-" + punteggio());
+      }
+    }
   }
 
   domande.forEach(function (q, idx) {
