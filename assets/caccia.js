@@ -91,12 +91,29 @@
     return ok;
   }
 
+  // --- Statistiche (GoatCounter: niente cookie, niente dati personali) ---
+  // Manda un evento una sola volta per telefono. Lo script di GoatCounter si carica
+  // in modo asincrono: se non è ancora pronto si riprova per qualche secondo.
+  // Se non arriva mai (es. blocca-pubblicità) non si segna come inviato.
+  function evento(nome, tentativi) {
+    var inviati = leggi("caccia-cx-inviati", []);
+    if (inviati.indexOf(nome) !== -1) return;
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: nome, title: nome, event: true });
+      inviati.push(nome); scrivi("caccia-cx-inviati", inviati);
+    } else if ((tentativi || 0) < 20) {
+      setTimeout(function () { evento(nome, (tentativi || 0) + 1); }, 500);
+    }
+  }
+
   function controllaFine() {
     var tutte = domande.every(function (q, idx) { return risposte[tappa + "." + idx]; });
     if (!tutte) return;
     var after = document.querySelector(".after");
     if (after) after.classList.add("shown");
     document.querySelectorAll(".score").forEach(function (el) { el.textContent = punteggio() + " / " + DOMANDE_TOTALI; });
+    evento("fine-tappa-" + tappa);
+    if (tappa === TAPPE) evento("punteggio-finale-" + punteggio());
   }
 
   domande.forEach(function (q, idx) {
